@@ -1,0 +1,125 @@
+@import url(./normalize.css);
+@import url(./variables.css);
+
+*{
+    font-family: var(--primary-font);
+}
+
+body{
+    background-color: var(--naranja);
+}
+.container{
+ /*    margin-left:var(--spacing-24);
+    margin-right:var(--spacing-24); */
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.nav__container{
+    display: flex;
+    background-color: var(--naranja);
+    justify-content: center;
+    align-items:center;
+    padding-top: var(--spacing-24);
+    padding-bottom: var(--spacing-24);
+}
+
+.header__logo{
+    width:150px;
+}
+
+.maintitle{
+ font-family: var(--primary-font);
+ font-size:2rem;
+ /* font-weight: 600; */
+ color:white;
+ text-align:center;
+ margin-top:var(--spacing-24);
+ margin-bottom:var(--spacing-24);
+}
+
+.insumos__grilla, .totales__grilla{
+    display: flex;
+    flex-direction:column;
+    background-color:white;
+    border-radius:15px;
+    margin-bottom:var(--spacing-24);
+    padding:var(--spacing-24) var(--spacing-16) var(--spacing-24) var(--spacing-16);
+    
+}
+
+.insumos__linea, .totales__linea{
+    display:grid;
+    grid-template-columns: 40% 40% 20%;
+    gap:var(--spacing-8);
+    border-bottom: solid 0.5px var(--naranja);
+    padding:var(--spacing-8);
+    align-items:center;
+    justify-content: left;
+}
+
+.insumos__linea--header h6{
+    font-weight: 800;
+}
+
+.insumo__nombre{
+    grid-column: 1;
+    font-size:1rem;
+    font-weight: 600;
+}
+
+
+.insumo__cantidad{
+    grid-column:2;
+    font-size:1rem;
+    font-weight: 300;
+   
+}
+
+.insumo__cantidad input{
+    width:30%;
+    border: solid 0.5px var(--naranja);
+    border-radius:3px;
+    margin-right:var(--spacing-8);
+    text-align:center;
+    
+}
+
+.insumo__costo{
+    grid-column:3;
+    font-size:1rem;
+    font-weight: 300;
+}
+
+.insumos__botones{
+    display: flex;
+    gap:var(--spacing-16);
+  
+    margin-top: var(--spacing-24);
+    align-self:center;
+}
+
+.btn{
+    padding: var(--spacing-8) var(--spacing-16);
+    border:none;
+    background-color: var(--rojo);
+    border-radius:15px;
+    color:white;
+
+}
+
+.totales__linea h6{
+    font-size:1rem;
+    font-weight: 800;
+}
+
+
+@media screen and (max-width:640px){
+    .container{
+        width:90%;
+    }
+    .header__logo{
+        width:25vw;
+    }
+}
