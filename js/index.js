@@ -62,10 +62,10 @@ function calcular () {
     document.getElementById("costoTan").innerText = "$" + Math.round(cTan);
     document.getElementById("costoHil").innerText = "$" + Math.round(cHil);
 
-    const costoTotal = cMost + cCar + cCor + cEst + cLetNum + cOji + cFim + cGan + cTan + cHil;
+    const costoTotal = Math.round(cMost + cCar + cCor + cEst + cLetNum + cOji + cFim + cGan + cTan + cHil);
     document.getElementById("costoTotal").innerText = "$" + Math.round(costoTotal);
 
-    const pv1 = costoTotal * 3;
+    const pv1 = Math.round(costoTotal * 3);
     const pv2 = costoTotal * 2.75;
     const pv3 = costoTotal * 2.5;
     
