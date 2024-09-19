@@ -68,10 +68,27 @@ function calcular () {
     const pv1 = costoTotal * 3;
     const pv2 = costoTotal * 2.75;
     const pv3 = costoTotal * 2.5;
-
+    
     document.getElementById("precioVenta1").innerText = "$" + Math.round(pv1);
     document.getElementById("precioVenta2").innerText = "$" + Math.round(pv2);
     document.getElementById("precioVenta3").innerText = "$" + Math.round(pv3);
+
+    const g1 = pv1 - costoTotal;
+    const gp1 = g1 - costoTotal; /* ganancia pura */
+    const g2 = pv2 - costoTotal;
+    const gp2 = g2 - costoTotal;
+    const g3 = pv3 - costoTotal;
+    const gp3 = g3 - costoTotal;
+
+    document.getElementById("ganancia1").innerText = "Ganás $" + g1;
+    document.getElementById("reponer1").innerText = "$" + costoTotal + " para reponer";
+    document.getElementById("pura1").innerHTML = "$" + gp1 + " de ganancia pura";
+    document.getElementById("ganancia2").innerText = "Ganás $" + g2;
+    document.getElementById("reponer2").innerText = "$" + costoTotal + " para reponer";
+    document.getElementById("pura2").innerHTML = "$" + gp2 + " de ganancia pura";
+    document.getElementById("ganancia3").innerText = "Ganás $" + g3;
+    document.getElementById("reponer3").innerText = "$" + costoTotal + " para reponer";
+    document.getElementById("pura3").innerHTML = "$" + gp3 + " de ganancia pura";
 
     document.getElementById("seccionTotales").classList.add("visible");
 

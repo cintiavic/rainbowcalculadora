@@ -39,6 +39,11 @@
  margin-bottom:var(--spacing-24);
 }
 
+.totales__grilla{
+    border: 1px solid var(--naranja);
+    border-radius:10px;
+}
+
 .insumos__grilla, .totales__grilla{
     display: flex;
     flex-direction:column;
@@ -46,10 +51,11 @@
     border-radius:15px;
     margin-bottom:var(--spacing-24);
     padding:var(--spacing-24) var(--spacing-16) var(--spacing-24) var(--spacing-16);
-    
 }
 
-.insumos__linea, .totales__linea{
+
+
+.insumos__linea{
     display:grid;
     grid-template-columns: 40% 40% 20%;
     gap:var(--spacing-8);
@@ -57,6 +63,20 @@
     padding:var(--spacing-8);
     align-items:center;
     justify-content: left;
+}
+
+.totales__linea{
+    display:grid;
+    grid-template-columns: 40% 15% 45%;
+    gap:var(--spacing-8);
+    border-bottom: solid 0.5px var(--naranja);
+    padding:var(--spacing-8);
+    align-items:center;
+    justify-content: left;
+}
+
+#ganancia1, #ganancia2, #ganancia3{
+    font-weight:800;
 }
 
 .insumos__linea--header h6{
