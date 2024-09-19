@@ -159,9 +159,12 @@
 
 @media screen and (max-width:640px){
     .container{
-        width:90%;
+        width:95%;
     }
     .header__logo{
-        width:25vw;
+        width:40vw;
+    }
+    .maintitle{
+        margin-top:0;
     }
 }

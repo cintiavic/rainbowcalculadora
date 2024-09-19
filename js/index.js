@@ -14,25 +14,25 @@ const pHil = 1;/* por centímetro */
 function calcular () {
     /* 1. Traigo las cantidades que se ingresaron en la grilla */
     
-    const cantMost = parseInt(document.getElementById("cMostacillas").value);
+    const cantMost = parseInt(document.getElementById("cMostacillas").value) || 0;
     console.log(cantMost);
-    const cantCar = parseInt(document.getElementById("cCaritas").value);
+    const cantCar = parseInt(document.getElementById("cCaritas").value) || 0;
     console.log(cantCar);
-    const cantCor = parseInt(document.getElementById("cRedondoCorazones").value);
+    const cantCor = parseInt(document.getElementById("cRedondoCorazones").value) || 0;
     console.log(cantCor);
-    const cantEst= parseInt(document.getElementById("cRedondoEstrellitas").value);
+    const cantEst= parseInt(document.getElementById("cRedondoEstrellitas").value) || 0;
     console.log(cantEst);
-    const cantLetNum = parseInt(document.getElementById("cLetrasNumeros").value);
+    const cantLetNum = parseInt(document.getElementById("cLetrasNumeros").value) || 0;
     console.log(cantLetNum);
-    const cantOji = parseInt(document.getElementById("cOjosTurcos").value);
+    const cantOji = parseInt(document.getElementById("cOjosTurcos").value) || 0;
     console.log(cantOji);
-    const cantFim = parseInt(document.getElementById("cFimos").value);
+    const cantFim = parseInt(document.getElementById("cFimos").value) || 0;
     console.log(cantFim);
-    const cantGan = parseInt(document.getElementById("cGanchitos").value);
+    const cantGan = parseInt(document.getElementById("cGanchitos").value) || 0;
     console.log(cantGan);
-    const cantTan = parseInt(document.getElementById("cTanzaElastica").value);
+    const cantTan = parseInt(document.getElementById("cTanzaElastica").value) || 0;
     console.log(cantTan);
-    const cantHil = parseInt(document.getElementById("cHiloEncerado").value);
+    const cantHil = parseInt(document.getElementById("cHiloEncerado").value) || 0;
     console.log(cantHil);
 
 
