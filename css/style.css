@@ -26,11 +26,34 @@
 .nav__container{
     display: flex;
     /* background-color: var(--naranja); */
-    justify-content: center;
+    justify-content: space-between;
     align-items:center;
     padding-top: var(--spacing-24);
     padding-bottom: var(--spacing-24);
 }
+
+.nav__list{
+    list-style-type: none;
+}
+
+
+.nav__item a{
+  font-family: var(--primary-font);
+  font-size: 1.5 rem;
+  color: var(--rojo);
+  cursor:pointer;
+  border-radius:15px;
+  transition: 0.3s background-color ease-in-out;
+  padding:var(--spacing-8);
+}
+
+a:hover{
+    background-color:var(--rojoOscuro);
+    color:white;
+}
+
+
+
 
 .header__logo{
     width:150px;
@@ -44,6 +67,16 @@
  text-align:center;
  margin-top:var(--spacing-24);
  margin-bottom:var(--spacing-24);
+}
+
+.maintitle-admin{
+    font-family: var(--primary-font);
+    font-size:2rem;
+    /* font-weight: 600; */
+    color:var(--rojoOscuro);
+    text-align:center;
+    margin-top:var(--spacing-24);
+    margin-bottom:var(--spacing-24);
 }
 
 .totales__grilla{
@@ -156,6 +189,14 @@
     visibility:visible;
 }
 
+
+/*ADMIN */
+
+.texto-admin{
+    font-family: var(--primary-font);
+    color:var(--negro);
+    text-align:center;
+}
 
 @media screen and (max-width:640px){
     .container{
