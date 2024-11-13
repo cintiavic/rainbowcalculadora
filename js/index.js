@@ -1,5 +1,5 @@
 /* PRECIOS INDIVIDUALES */
-
+const pPerM = 22;
 const pMost = 6.4;
 const pCar = 9.4;
 const pCor = 11.5;
@@ -13,7 +13,8 @@ const pHil = 1;/* por centímetro */
 
 function calcular () {
     /* 1. Traigo las cantidades que se ingresaron en la grilla */
-    
+    const cantPerM = parseInt(document.getElementById("cPerlasM").value) || 0;
+    console.log(cantPerM);
     const cantMost = parseInt(document.getElementById("cMostacillas").value) || 0;
     console.log(cantMost);
     const cantCar = parseInt(document.getElementById("cCaritas").value) || 0;
@@ -37,7 +38,7 @@ function calcular () {
 
 
      /* 2. Calculo los costo individuales */
-
+     const cPerM = cantPerM * pPerM;
      const cMost = cantMost * pMost;
      const cCar = cantCar * pCar;
      const cCor = cantCor * pCor;
@@ -51,6 +52,7 @@ function calcular () {
 
      /*3. Inserto los valores en el correpsondiente elemento del DOM*/
 
+    document.getElementById("costoPerM").innerText = "$" + Math.round(cPerM); 
     document.getElementById("costoMost").innerText = "$" + Math.round(cMost);
     document.getElementById("costoCar").innerText = "$" + Math.round(cCar);
     document.getElementById("costoCor").innerText = "$" + Math.round(cCor);
@@ -62,7 +64,7 @@ function calcular () {
     document.getElementById("costoTan").innerText = "$" + Math.round(cTan);
     document.getElementById("costoHil").innerText = "$" + Math.round(cHil);
 
-    const costoTotal = Math.round(cMost + cCar + cCor + cEst + cLetNum + cOji + cFim + cGan + cTan + cHil);
+    const costoTotal = Math.round(cPerM + cMost + cCar + cCor + cEst + cLetNum + cOji + cFim + cGan + cTan + cHil);
     document.getElementById("costoTotal").innerText = "$" + Math.round(costoTotal);
 
     const pv1 = Math.round(costoTotal * 3);
@@ -97,6 +99,7 @@ function calcular () {
 };
 
 function borrarTodo(){
+    document.getElementById("costoPerM").innerText = "$" + 0;
     document.getElementById("costoMost").innerText = "$" + 0;
     document.getElementById("costoCar").innerText = "$" + 0;
     document.getElementById("costoCor").innerText = "$" + 0;
